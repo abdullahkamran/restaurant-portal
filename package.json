@@ -1,13 +1,16 @@
 {
-  "name": "learn-starter",
+  "name": "restaurant-portal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
+    "antd": "^4.16.6",
+    "mdbreact": "^5.0.2",
     "next": "^10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
