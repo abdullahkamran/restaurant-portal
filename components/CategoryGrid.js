@@ -32,7 +32,7 @@ export default function CategoryGrid({ categories = [], notifyCategoriesChanged,
         <div>
           <Button
             shape="circle"
-            icon={<EditOutlined />}
+            icon={<EditOutlined style={{position: 'absolute', top: '4px', left: '7px'}}/>}
             onClick={() => editCategory(category)}
             type="primary"
           ></Button>
@@ -45,7 +45,7 @@ export default function CategoryGrid({ categories = [], notifyCategoriesChanged,
           >
             <Button
               shape="circle"
-              icon={<DeleteOutlined />}
+              icon={<DeleteOutlined style={{position: 'absolute', top: '4px', left: '8px'}}/>}
               type="primary"
             ></Button>
           </Popconfirm>
@@ -110,7 +110,7 @@ export default function CategoryGrid({ categories = [], notifyCategoriesChanged,
               <MDBCardTitle>Categories</MDBCardTitle>
               <Button
                 type="primary"
-                icon={<PlusOutlined />}
+                icon={<PlusOutlined style={{position: 'absolute', top: '7px', left: '8px'}}/>}
                 style={{ float : 'right'}}
                 onClick={addCategory}>
                 Add Category

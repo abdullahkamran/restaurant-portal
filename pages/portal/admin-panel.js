@@ -1,21 +1,17 @@
-import '@fortawesome/fontawesome-free/css/all.min.css'; import
-  'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
-import 'antd/dist/antd.css';
+
 
 import Head from 'next/head'
-import { categoriesMock } from '../../utils/mockApi';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import {
   MDBContainer,
-  MDBAlert, MDBRow, MDBCol, MDBNavbar, MDBNavbarBrand, MDBNavbarToggler, MDBCollapse, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownItem, MDBIcon,
-  MDBDropdownToggle, MDBDropdownMenu, MDBCard, MDBCardBody, MDBCardTitle,
+  MDBAlert, MDBRow, MDBCol, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBIcon,
+  MDBDropdownToggle,
 } from 'mdbreact';
 import {
-  Button, Select, Spin, Tabs, Dropdown, Menu
+  Spin, Tabs, Dropdown, Menu
 } from 'antd';
 import { InfoCircleOutlined, MenuOutlined, OrderedListOutlined } from '@ant-design/icons';
 
@@ -39,7 +35,6 @@ export default function AdminPanel() {
     color: null,
     content: null,
   });
-  const categoryFormRef = useRef(null);
 
   useEffect(() => {
     sendCategoriesRequest();
@@ -74,55 +69,55 @@ export default function AdminPanel() {
     console.log(url, body);
   }
 
-  function submitCategoryForm() {
-    const formElements = categoryFormRef.current.elements;
-    const errorMessages = [];
+  // function submitCategoryForm() {
+  //   const formElements = categoryFormRef.current.elements;
+  //   const errorMessages = [];
 
-    const categoryName = formElements.name.value;
-    if (!categoryName) {
-      formElements.name.setAttribute('invalid', true);
-      errorMessages.push('Name is required.');
-    } else {
-      for (const category of categories) {
-        if (formState.modifyId !== category.id && category.name === categoryName) {
-          formElements.name.setAttribute('invalid', true);
-          errorMessages.push('Category name already exists.');
-        }
-      }
-    }
-    if (errorMessages.length === 0) {
-      formElements.name.removeAttribute('invalid');
-    }
+  //   const categoryName = formElements.name.value;
+  //   if (!categoryName) {
+  //     formElements.name.setAttribute('invalid', true);
+  //     errorMessages.push('Name is required.');
+  //   } else {
+  //     for (const category of categories) {
+  //       if (formState.modifyId !== category.id && category.name === categoryName) {
+  //         formElements.name.setAttribute('invalid', true);
+  //         errorMessages.push('Category name already exists.');
+  //       }
+  //     }
+  //   }
+  //   if (errorMessages.length === 0) {
+  //     formElements.name.removeAttribute('invalid');
+  //   }
 
-    const categoryDescription = formElements.description.value;
+  //   const categoryDescription = formElements.description.value;
 
-    const categoryOrder = formElements.order.value;
-    if (!categoryOrder) {
-      formElements.order.setAttribute('invalid', true);
-      errorMessages.push('Order is required.');
-    } else if (parseInt(categoryOrder, 10) < 0) {
-      formElements.order.setAttribute('invalid', true);
-      errorMessages.push('Order can not be negative.');
-    } else {
-      formElements.order.removeAttribute('invalid');
-    }
+  //   const categoryOrder = formElements.order.value;
+  //   if (!categoryOrder) {
+  //     formElements.order.setAttribute('invalid', true);
+  //     errorMessages.push('Order is required.');
+  //   } else if (parseInt(categoryOrder, 10) < 0) {
+  //     formElements.order.setAttribute('invalid', true);
+  //     errorMessages.push('Order can not be negative.');
+  //   } else {
+  //     formElements.order.removeAttribute('invalid');
+  //   }
 
-    if (errorMessages.length > 0) {
-      setAlertState({
-        isOpen: true,
-        color: 'danger',
-        messages: errorMessages,
-      });
-    } else {
-      setAlertState({ isOpen: false });
-      sendPutRequest(`/api/categories/${formState.modifyId}`, {
-        name: categoryName,
-        description: categoryDescription,
-        order: categoryOrder,
-      });
-    }
+  //   if (errorMessages.length > 0) {
+  //     setAlertState({
+  //       isOpen: true,
+  //       color: 'danger',
+  //       messages: errorMessages,
+  //     });
+  //   } else {
+  //     setAlertState({ isOpen: false });
+  //     sendPutRequest(`/api/categories/${formState.modifyId}`, {
+  //       name: categoryName,
+  //       description: categoryDescription,
+  //       order: categoryOrder,
+  //     });
+  //   }
 
-  }
+  // }
 
   function logout() {
     setLoading(true);

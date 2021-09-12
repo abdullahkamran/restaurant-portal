@@ -29,7 +29,7 @@ export default function InfoGrid({ data = [] ,setLoading, setAlertState }) {
         <div>
           <Button
             shape="circle"
-            icon={<EditOutlined />}
+            icon={<EditOutlined style={{position: 'absolute', top: '4px', left: '7px'}}/>}
             onClick={() => editInfo(entry)}
             type="primary"
           ></Button>
@@ -42,7 +42,7 @@ export default function InfoGrid({ data = [] ,setLoading, setAlertState }) {
           >
             <Button
               shape="circle"
-              icon={<DeleteOutlined />}
+              icon={<DeleteOutlined style={{position: 'absolute', top: '4px', left: '8px'}}/>}
               type="primary"
             ></Button>
           </Popconfirm>
@@ -90,7 +90,7 @@ export default function InfoGrid({ data = [] ,setLoading, setAlertState }) {
               <MDBCardTitle>Info</MDBCardTitle>
               <Button
                 type="primary"
-                icon={<PlusOutlined />}
+                icon={<PlusOutlined style={{position: 'absolute', top: '7px', left: '8px'}}/>}
                 style={{ float : 'right'}}
                 onClick={addInfo}>
                 Add Info

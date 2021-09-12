@@ -4,7 +4,6 @@ import {
   InputNumber,
   Modal,
 } from 'antd';
-import 'antd/dist/antd.css';
 
 import { ajaxFetch } from '../utils/ajaxUtils';
 

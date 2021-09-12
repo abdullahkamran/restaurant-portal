@@ -41,7 +41,7 @@ export default function DishGrid({ categories = [], notifyCategoriesChanged, set
           <div>
             <Button
               shape="circle"
-              icon={<EditOutlined />}
+              icon={<EditOutlined style={{position: 'absolute', top: '4px', left: '7px'}}/>}
               onClick={() => editDish(dish)}
               type="primary"
             ></Button>
@@ -54,7 +54,7 @@ export default function DishGrid({ categories = [], notifyCategoriesChanged, set
             >
               <Button
                 shape="circle"
-                icon={<DeleteOutlined />}
+                icon={<DeleteOutlined style={{position: 'absolute', top: '4px', left: '8px'}}/>}
                 type="primary"
               ></Button>
             </Popconfirm>
@@ -141,7 +141,7 @@ export default function DishGrid({ categories = [], notifyCategoriesChanged, set
               </Select>
                 <Button
                   type="primary"
-                  icon={<PlusOutlined />}
+                  icon={<PlusOutlined style={{position: 'absolute', top: '7px', left: '8px'}}/>}
                   style={{ float : 'right', width: '20%'}}
                   onClick={addDish}>
                   Add Dish

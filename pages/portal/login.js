@@ -1,8 +1,3 @@
-import '@fortawesome/fontawesome-free/css/all.min.css'; import
-  'bootstrap-css-only/css/bootstrap.min.css'; import
-  'mdbreact/dist/css/mdb.css';
-import 'antd/dist/antd.css';
-
 import Head from 'next/head'
 
 import { MDBContainer, MDBBtn, MDBCol, MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBModal, MDBModalHeader, MDBModalBody, MDBModalFooter } from 'mdbreact';
