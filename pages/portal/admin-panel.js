@@ -21,7 +21,7 @@ import InfoGrid from '../../components/InfoGrid';
 import CategoryGrid from '../../components/CategoryGrid';
 import DishGrid from '../../components/DishGrid';
 import { ajaxFetch } from '../../utils/ajaxUtils';
-import { deleteCookie } from '../../utils/cookieUtils';
+import { deleteCookie, getCookie } from '../../utils/cookieUtils';
 
 export default function AdminPanel() {
 
