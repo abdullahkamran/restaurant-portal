@@ -71,7 +71,7 @@ export default function CategoryGrid({ categories = [], notifyCategoriesChanged,
 
   function deleteCategory(category) {
     ajaxFetch({
-      url: `http://localhost:5000/api/v1/category/${category._id}`,
+      url: `/api/v1/category/${category._id}`,
       method: 'DELETE',
     }, (xhr) => {
       if (xhr.status === 200) {

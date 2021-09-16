@@ -47,7 +47,7 @@ export default function Login() {
     setAlertState({});
     setLoading(true);
     ajaxFetch({
-      url: 'http://localhost:5000/api/v1/login',
+      url: '/api/v1/login',
       method: 'POST',
       contentType: 'application/x-www-form-urlencoded',
       body: urlEncodeFormData(formData),

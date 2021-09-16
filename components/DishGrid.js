@@ -87,7 +87,7 @@ export default function DishGrid({ categories = [], notifyCategoriesChanged, set
 
   function deleteDish(dish) {
     ajaxFetch({
-      url: `http://localhost:5000/api/v1/dish/${dish._id}`,
+      url: `/api/v1/dish/${dish._id}`,
       method: 'DELETE',
     }, (xhr) => {
       if (xhr.status === 200) {

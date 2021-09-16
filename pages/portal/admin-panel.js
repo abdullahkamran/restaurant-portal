@@ -50,7 +50,7 @@ export default function AdminPanel() {
 
   function sendCategoriesRequest() {
     setLoading(true);
-    ajaxFetch({ url: `http://localhost:5000/api/v1/category/all/dishes` }, (xhr) => {
+    ajaxFetch({ url: `/api/v1/category/all/dishes` }, (xhr) => {
       if (xhr.status === 200) {
         setCategories(JSON.parse(xhr.response));
       } else {

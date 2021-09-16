@@ -36,7 +36,7 @@ export default function DishModal({ visible = false, setVisible, initialValues =
 
   const onFinish = (values) => {
     ajaxFetch({
-      url: `http://localhost:5000/api/v1/dish/${initialValues._id || ''}`,
+      url: `/api/v1/dish/${initialValues._id || ''}`,
       method: initialValues._id ? 'PUT' : 'POST',
       body: values,
     }, (xhr) => {

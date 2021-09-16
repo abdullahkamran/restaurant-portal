@@ -36,7 +36,7 @@ export default function CategoryModal({ visible = false, setVisible, initialValu
 
   const onFinish = (values) => {
     ajaxFetch({
-      url: `http://localhost:5000/api/v1/category/${initialValues._id || ''}`,
+      url: `/api/v1/category/${initialValues._id || ''}`,
       method: initialValues._id ? 'PUT' : 'POST',
       body: values,
     }, (xhr) => {

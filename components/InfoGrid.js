@@ -68,7 +68,7 @@ export default function InfoGrid({ data = [] ,setLoading, setAlertState }) {
 
   function deleteInfo(entry) {
     ajaxFetch({
-      url: `http://localhost:5000/api/v1/info/${entry._id}`,
+      url: `/api/v1/info/${entry._id}`,
       method: 'DELETE',
     });
   }
