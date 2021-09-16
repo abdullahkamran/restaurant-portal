@@ -41,14 +41,12 @@ export default function InfoModal({ visible = false, setVisible, initialValues =
       body: values,
     }, (xhr) => {
       if (xhr.status === 200 || xhr.status === 201) {
-        console.log('success');
         setAlertState({
           isOpen: true,
           color: 'success',
           messages: ['Saved'],
         });
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',

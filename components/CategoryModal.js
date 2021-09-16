@@ -48,7 +48,6 @@ export default function CategoryModal({ visible = false, setVisible, initialValu
           messages: ['Saved'],
         });
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',

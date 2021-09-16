@@ -54,7 +54,6 @@ export default function AdminPanel() {
       if (xhr.status === 200) {
         setCategories(JSON.parse(xhr.response));
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',
@@ -65,9 +64,9 @@ export default function AdminPanel() {
     });
   }
 
-  function sendPutRequest(url, body) {
-    console.log(url, body);
-  }
+  // function sendPutRequest(url, body) {
+  //   console.log(url, body);
+  // }
 
   // function submitCategoryForm() {
   //   const formElements = categoryFormRef.current.elements;

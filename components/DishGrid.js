@@ -98,7 +98,6 @@ export default function DishGrid({ categories = [], notifyCategoriesChanged, set
           messages: ['Saved'],
         });
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',

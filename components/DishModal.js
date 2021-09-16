@@ -48,7 +48,6 @@ export default function DishModal({ visible = false, setVisible, initialValues =
           messages: ['Saved'],
         });
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',

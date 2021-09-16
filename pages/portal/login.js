@@ -25,7 +25,6 @@ export default function Login() {
       router.push('/portal/admin-panel');
       return;
     }
-    console.log(router.query);
     if (router.query.logout != null) {
       setAlertState({
         visible: true,

@@ -82,7 +82,6 @@ export default function CategoryGrid({ categories = [], notifyCategoriesChanged,
           messages: ['Success'],
         });
       } else {
-        console.log('error');
         setAlertState({
           isOpen: true,
           color: 'danger',
