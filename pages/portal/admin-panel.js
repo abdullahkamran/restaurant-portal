@@ -37,6 +37,11 @@ export default function AdminPanel() {
   });
 
   useEffect(() => {
+    if (!getCookie('access_token')) {
+      setLoading(true);
+      router.push('/portal/admin-panel');
+      return;
+    }
     sendCategoriesRequest();
   }, []);
 
