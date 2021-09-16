@@ -121,7 +121,7 @@ export default function AdminPanel() {
 
   function logout() {
     setLoading(true);
-    deleteCookie('access_token');
+    deleteCookie('access_token', '/');
     router.push('/portal/login?logout');
   }
 
